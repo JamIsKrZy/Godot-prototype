@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://dt4ll6xkexq56"
-path="res://.godot/imported/feudal_japanese_house.glb-fe7881975a86dbf8feca626a9f954820.scn"
+path="res://.godot/imported/feudal_japanese_house.glb-2d972df14f82f74f43d7fb88f2512023.scn"
 
 [deps]
 
-source_file="res://3d_assets/feudal_japanese_house.glb"
-dest_files=["res://.godot/imported/feudal_japanese_house.glb-fe7881975a86dbf8feca626a9f954820.scn"]
+source_file="res://Model/Stairs/feudal_japanese_house.glb"
+dest_files=["res://.godot/imported/feudal_japanese_house.glb-2d972df14f82f74f43d7fb88f2512023.scn"]
 
 [params]
 
