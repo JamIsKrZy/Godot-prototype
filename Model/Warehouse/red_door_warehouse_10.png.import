@@ -2,20 +2,20 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://beorlawk67j2t"
-path.s3tc="res://.godot/imported/red_door_warehouse_3.png-b30b0ecbda99f71109508afaf327a127.s3tc.ctex"
+uid="uid://cvmbpn6c36ivj"
+path.s3tc="res://.godot/imported/red_door_warehouse_10.png-3fddb65bde0c48680eb5c83cb6fa24b7.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
 generator_parameters={
-"md5": "80ea9b2c236cbae0ac82c21ae42e7718"
+"md5": "83016d7cdfddc3418c71ba607c712cab"
 }
 
 [deps]
 
-source_file="res://3d_assets/red_door_warehouse_3.png"
-dest_files=["res://.godot/imported/red_door_warehouse_3.png-b30b0ecbda99f71109508afaf327a127.s3tc.ctex"]
+source_file="res://Model/Warehouse/red_door_warehouse_10.png"
+dest_files=["res://.godot/imported/red_door_warehouse_10.png-3fddb65bde0c48680eb5c83cb6fa24b7.s3tc.ctex"]
 
 [params]
 

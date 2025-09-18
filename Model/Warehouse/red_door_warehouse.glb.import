@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://bs1r08ptbv4x1"
-path="res://.godot/imported/red_door_warehouse.glb-172928ce5d96f5078f3af68fedf20c31.scn"
+path="res://.godot/imported/red_door_warehouse.glb-6fe4d68c081a4b5e48d4b559555ee155.scn"
 
 [deps]
 
-source_file="res://3d_assets/red_door_warehouse.glb"
-dest_files=["res://.godot/imported/red_door_warehouse.glb-172928ce5d96f5078f3af68fedf20c31.scn"]
+source_file="res://Model/Warehouse/red_door_warehouse.glb"
+dest_files=["res://.godot/imported/red_door_warehouse.glb-6fe4d68c081a4b5e48d4b559555ee155.scn"]
 
 [params]
 
