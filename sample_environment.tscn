@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=3 uid="uid://rkxb5rtmimaw"]
+
+[ext_resource type="PackedScene" uid="uid://dt4ll6xkexq56" path="res://3d_assets/feudal_japanese_house.glb" id="1_fudbn"]
+[ext_resource type="PackedScene" uid="uid://bs1r08ptbv4x1" path="res://3d_assets/red_door_warehouse.glb" id="2_ehtv0"]
+[ext_resource type="PackedScene" uid="uid://cn1o6msy6cand" path="res://Model/Player/2D_Player.tscn" id="3_fhgdp"]
+
+[node name="Node3D" type="Node3D"]
+
+[node name="Sketchfab_Scene" parent="." instance=ExtResource("1_fudbn")]
+
+[node name="Sketchfab_Scene2" parent="." instance=ExtResource("2_ehtv0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.76536, 1.0958006, -0.00157547)
+
+[node name="2dPlayer" parent="." instance=ExtResource("3_fhgdp")]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -13.626399, 0, 3.550785)
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.9747612, 0.22325012, 0, -0.22325012, 0.9747612, -13.1581335, 1.6226096, 6.5793176)
