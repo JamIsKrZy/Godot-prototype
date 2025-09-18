@@ -2,20 +2,20 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://djiwbo2soml4f"
-path.s3tc="res://.godot/imported/feudal_japanese_house_0.jpg-b4e14305c594f55f8c14b86f83607be5.s3tc.ctex"
+uid="uid://wmwo4tsrj8s6"
+path.s3tc="res://.godot/imported/feudal_japanese_house_1.jpg-e1f431b8b514fe6e2c5b55069b0e43bb.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
 generator_parameters={
-"md5": "2be894aa0b2324ba593263fe0ad6866f"
+"md5": "28941c8ab6e70a8d6dce15fd51e3f2cc"
 }
 
 [deps]
 
-source_file="res://3d_assets/feudal_japanese_house_0.jpg"
-dest_files=["res://.godot/imported/feudal_japanese_house_0.jpg-b4e14305c594f55f8c14b86f83607be5.s3tc.ctex"]
+source_file="res://Model/Stairs/feudal_japanese_house_1.jpg"
+dest_files=["res://.godot/imported/feudal_japanese_house_1.jpg-e1f431b8b514fe6e2c5b55069b0e43bb.s3tc.ctex"]
 
 [params]
 

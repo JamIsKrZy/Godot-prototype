@@ -1,0 +1,15 @@
+[gd_scene load_steps=2 format=3 uid="uid://bg78xrwbje5qq"]
+
+[ext_resource type="PackedScene" uid="uid://dt4ll6xkexq56" path="res://Model/Stairs/feudal_japanese_house.glb" id="1_axv32"]
+
+[node name="Stairs" type="Node3D"]
+
+[node name="Sketchfab_Scene" parent="." instance=ExtResource("1_axv32")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.24377263, 0, -2.8540354)
+
+[node name="StaticBody3D4" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.2648822, 0.0046263933)
+
+[node name="CollisionPolygon3D" type="CollisionPolygon3D" parent="StaticBody3D4"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0030651093, -0.18796396, -0.1262834)
+polygon = PackedVector2Array(3.7854466, 0.18990111, -3.8725572, -0.38284332, 0.18111512, 2.0117097, 2.270353, 2.0279512, 2.2588108, 2.7805219)
