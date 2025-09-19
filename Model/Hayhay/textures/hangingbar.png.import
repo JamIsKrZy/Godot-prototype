@@ -2,21 +2,20 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dh6b1n2kpn0ip"
-path.s3tc="res://.godot/imported/4_Cat_Fall-Sheet.png-5d0a5b0f3ddaacb09c5e9d0619db92fe.s3tc.ctex"
+uid="uid://b6nmroqnjvgbh"
+path="res://.godot/imported/hangingbar.png-034b64bdc0c0564c66d79df77a778292.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
-"vram_texture": true
+"vram_texture": false
 }
 
 [deps]
 
-source_file="res://Model/Player/sprite/4_Cat_Fall-Sheet.png"
-dest_files=["res://.godot/imported/4_Cat_Fall-Sheet.png-5d0a5b0f3ddaacb09c5e9d0619db92fe.s3tc.ctex"]
+source_file="res://Model/Hayhay/textures/hangingbar.png"
+dest_files=["res://.godot/imported/hangingbar.png-034b64bdc0c0564c66d79df77a778292.ctex"]
 
 [params]
 
-compress/mode=2
+compress/mode=0
 compress/high_quality=false
 compress/lossy_quality=0.7
 compress/uastc_level=0
@@ -24,7 +23,7 @@ compress/rdo_quality_loss=0.0
 compress/hdr_compression=1
 compress/normal_map=0
 compress/channel_pack=0
-mipmaps/generate=true
+mipmaps/generate=false
 mipmaps/limit=-1
 roughness/mode=0
 roughness/src_normal=""
@@ -38,4 +37,4 @@ process/normal_map_invert_y=false
 process/hdr_as_srgb=false
 process/hdr_clamp_exposure=false
 process/size_limit=0
-detect_3d/compress_to=0
+detect_3d/compress_to=1
