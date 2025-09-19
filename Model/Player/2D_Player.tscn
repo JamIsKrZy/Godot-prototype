@@ -1,8 +1,25 @@
-[gd_scene load_steps=25 format=3 uid="uid://cn1o6msy6cand"]
+[gd_scene load_steps=30 format=3 uid="uid://cn1o6msy6cand"]
 
 [ext_resource type="Script" uid="uid://c4hljmgexn63e" path="res://Model/Player/2d_player.gd" id="1_1j5a6"]
 [ext_resource type="Texture2D" uid="uid://clw803x2p6qm" path="res://Model/Player/sprite/1_Cat_Idle-Sheet.png" id="1_nvmo8"]
 [ext_resource type="Texture2D" uid="uid://bf2qqy7upyu8q" path="res://Model/Player/sprite/2_Cat_Run-Sheet.png" id="2_1j5a6"]
+[ext_resource type="Texture2D" uid="uid://dh6b1n2kpn0ip" path="res://Model/Player/sprite/4_Cat_Fall-Sheet.png" id="2_mj3c8"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nhum6"]
+atlas = ExtResource("2_mj3c8")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7fl4d"]
+atlas = ExtResource("2_mj3c8")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3k323"]
+atlas = ExtResource("2_mj3c8")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_og3gq"]
+atlas = ExtResource("2_mj3c8")
+region = Rect2(96, 0, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_uxje5"]
 atlas = ExtResource("1_nvmo8")
@@ -78,6 +95,23 @@ region = Rect2(288, 0, 32, 32)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_x0vt2"]
 animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nhum6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7fl4d")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3k323")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_og3gq")
+}],
+"loop": true,
+"name": &"fall",
+"speed": 5.0
+}, {
 "frames": [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_uxje5")
@@ -175,7 +209,8 @@ script = ExtResource("1_1j5a6")
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -0.017, 0.227, 0.012)
 texture_filter = 4
 sprite_frames = SubResource("SpriteFrames_x0vt2")
-animation = &"idle"
+animation = &"fall"
+frame_progress = 0.707769
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0039634705, 0.16604151, 0.013799332)
