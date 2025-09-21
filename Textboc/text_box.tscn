@@ -1,0 +1,37 @@
+[gd_scene load_steps=5 format=3 uid="uid://dfdk7pnqjgy7e"]
+
+[ext_resource type="Script" uid="uid://drv85qhbn61fy" path="res://Textboc/text_box.gd" id="1_30i2y"]
+[ext_resource type="Texture2D" uid="uid://i02pm7g3knkk" path="res://Textboc/pixil-frame-0 (2).png" id="1_c1sg4"]
+[ext_resource type="FontFile" uid="uid://cucjr3x83cxsh" path="res://Asset/Born2bSportyV2.ttf" id="3_l7dey"]
+
+[sub_resource type="FontVariation" id="FontVariation_c1sg4"]
+base_font = ExtResource("3_l7dey")
+
+[node name="TextBox" type="MarginContainer"]
+script = ExtResource("1_30i2y")
+
+[node name="NinePatchRect" type="NinePatchRect" parent="."]
+layout_mode = 2
+texture = ExtResource("1_c1sg4")
+patch_margin_left = 16
+patch_margin_top = 12
+patch_margin_right = 16
+patch_margin_bottom = 16
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="MarginContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/line_spacing = -8
+theme_override_fonts/font = SubResource("FontVariation_c1sg4")
+theme_override_font_sizes/font_size = 20
+vertical_alignment = 1
+
+[node name="LetterDisplayTimer" type="Timer" parent="."]
+one_shot = true
+
+[connection signal="timeout" from="LetterDisplayTimer" to="." method="_on_letter_display_timer_timeout"]
