@@ -1,0 +1,95 @@
+[gd_scene load_steps=12 format=3 uid="uid://btcn8n48gpl3i"]
+
+[ext_resource type="Texture2D" uid="uid://buflio511p6c8" path="res://Model/Trash/trash.png" id="1_asb22"]
+[ext_resource type="Script" uid="uid://cfwx3b0eonuch" path="res://Model/Trash/animated_sprite_3d.gd" id="2_iy0pa"]
+[ext_resource type="Script" uid="uid://lsypmwtq65jv" path="res://Model/Trash/area_3d.gd" id="3_iy0pa"]
+[ext_resource type="Texture2D" uid="uid://50lhwmfkd7cj" path="res://Model/Trash/trash_outline.png" id="4_8mwoo"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_iy0pa"]
+atlas = ExtResource("1_asb22")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8mwoo"]
+atlas = ExtResource("1_asb22")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ivy2f"]
+atlas = ExtResource("1_asb22")
+region = Rect2(0, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nm0rf"]
+atlas = ExtResource("1_asb22")
+region = Rect2(32, 32, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_t67ci"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_iy0pa")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8mwoo")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ivy2f")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nm0rf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ivy2f")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8mwoo")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_iy0pa")
+}],
+"loop": false,
+"name": &"idle",
+"speed": 10.0
+}]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_asb22"]
+size = Vector3(0.6269531, 0.8061676, 0.06573486)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_8mwoo"]
+size = Vector3(2.4521484, 1, 1.6297607)
+
+[node name="Trash" type="StaticBody3D"]
+
+[node name="AnimatedSprite3D" type="AnimatedSprite3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0026765168, 0.46163812, -0.12832755)
+pixel_size = 0.05
+texture_filter = 0
+sprite_frames = SubResource("SpriteFrames_t67ci")
+animation = &"idle"
+autoplay = "idle"
+frame = 6
+frame_progress = 1.0
+script = ExtResource("2_iy0pa")
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 2.0
+autostart = true
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0009765625, 0.40270233, -0.1166687)
+shape = SubResource("BoxShape3D_asb22")
+
+[node name="Area3D" type="Area3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.43614674, 0)
+script = ExtResource("3_iy0pa")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.28070068)
+shape = SubResource("BoxShape3D_8mwoo")
+
+[node name="Sprite3D" type="Sprite3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.008405253, 0.46279997, -0.13102585)
+visible = false
+pixel_size = 0.05
+texture_filter = 0
+texture = ExtResource("4_8mwoo")
+
+[connection signal="timeout" from="Timer" to="AnimatedSprite3D" method="_on_timer_timeout"]

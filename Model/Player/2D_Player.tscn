@@ -1,0 +1,218 @@
+[gd_scene load_steps=30 format=3 uid="uid://cn1o6msy6cand"]
+
+[ext_resource type="Script" uid="uid://c4hljmgexn63e" path="res://Model/Player/2d_player.gd" id="1_1j5a6"]
+[ext_resource type="Texture2D" uid="uid://clw803x2p6qm" path="res://Model/Player/sprite/1_Cat_Idle-Sheet.png" id="1_nvmo8"]
+[ext_resource type="Texture2D" uid="uid://bf2qqy7upyu8q" path="res://Model/Player/sprite/2_Cat_Run-Sheet.png" id="2_1j5a6"]
+[ext_resource type="Texture2D" uid="uid://dh6b1n2kpn0ip" path="res://Model/Player/sprite/4_Cat_Fall-Sheet.png" id="2_mj3c8"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nhum6"]
+atlas = ExtResource("2_mj3c8")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7fl4d"]
+atlas = ExtResource("2_mj3c8")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3k323"]
+atlas = ExtResource("2_mj3c8")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_og3gq"]
+atlas = ExtResource("2_mj3c8")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_uxje5"]
+atlas = ExtResource("1_nvmo8")
+region = Rect2(0, 0, 30, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_evoy7"]
+atlas = ExtResource("1_nvmo8")
+region = Rect2(32, 0, 30, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1ryve"]
+atlas = ExtResource("1_nvmo8")
+region = Rect2(64, 0, 30, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2pj1e"]
+atlas = ExtResource("1_nvmo8")
+region = Rect2(96, 0, 30, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wgoxc"]
+atlas = ExtResource("1_nvmo8")
+region = Rect2(128, 0, 30, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_55vbm"]
+atlas = ExtResource("1_nvmo8")
+region = Rect2(160, 0, 30, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_scijg"]
+atlas = ExtResource("1_nvmo8")
+region = Rect2(192, 0, 30, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tscpq"]
+atlas = ExtResource("1_nvmo8")
+region = Rect2(224, 0, 30, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_v2ok4"]
+atlas = ExtResource("2_1j5a6")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_x5h3q"]
+atlas = ExtResource("2_1j5a6")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lyw4j"]
+atlas = ExtResource("2_1j5a6")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7pive"]
+atlas = ExtResource("2_1j5a6")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1wwp3"]
+atlas = ExtResource("2_1j5a6")
+region = Rect2(128, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_y6xtx"]
+atlas = ExtResource("2_1j5a6")
+region = Rect2(160, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nocg0"]
+atlas = ExtResource("2_1j5a6")
+region = Rect2(192, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mhx4l"]
+atlas = ExtResource("2_1j5a6")
+region = Rect2(224, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0imkt"]
+atlas = ExtResource("2_1j5a6")
+region = Rect2(256, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ujlwr"]
+atlas = ExtResource("2_1j5a6")
+region = Rect2(288, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_x0vt2"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nhum6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7fl4d")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3k323")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_og3gq")
+}],
+"loop": true,
+"name": &"fall",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_uxje5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_evoy7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1ryve")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2pj1e")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wgoxc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_55vbm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_scijg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tscpq")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 4.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_v2ok4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_x5h3q")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lyw4j")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7pive")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1wwp3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_y6xtx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nocg0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mhx4l")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0imkt")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ujlwr")
+}],
+"loop": true,
+"name": &"run",
+"speed": 8.0
+}]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_vsjvh"]
+size = Vector3(0.17337799, 0.35144043, 0.06544141)
+
+[sub_resource type="GDScript" id="GDScript_nvmo8"]
+script/source = "extends CollisionShape3D
+
+func _ready():
+	connect(\"body_entered\", Callable(self, \"_on_body_entered\"))
+	connect(\"body_exited\", Callable(self, \"_on_body_exited\"))
+
+func _on_body_entered(body):
+	if body.is_in_group(\"player\"): # Add your player to a \"player\" group
+		body.can_interact = true
+		body.current_action_item = self
+
+func _on_body_exited(body):
+	if body.is_in_group(\"player\"):
+		body.can_interact = false
+		body.current_action_item = null
+
+func trigger_action(player):
+	print(\"Action triggered by\", player.name)
+	# Do whatever (open door, pick item, etc.)
+"
+
+[node name="2dPlayer" type="CharacterBody3D"]
+script = ExtResource("1_1j5a6")
+
+[node name="AnimatedSprite3D" type="AnimatedSprite3D" parent="."]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -0.017, 0.227, 0.012)
+texture_filter = 4
+sprite_frames = SubResource("SpriteFrames_x0vt2")
+animation = &"fall"
+frame_progress = 0.707769
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0039634705, 0.16604151, 0.013799332)
+shape = SubResource("BoxShape3D_vsjvh")
+script = SubResource("GDScript_nvmo8")
