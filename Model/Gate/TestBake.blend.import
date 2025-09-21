@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://8v0hejwprhxc"
-path="res://.godot/imported/ClothDryer.blend-8783f14032843fa6a354236228893827.scn"
+uid="uid://kpg165oekuo6"
+path="res://.godot/imported/TestBake.blend-10d42798830b54082345d6dfc3a422e2.scn"
 
 [deps]
 
-source_file="res://Model/Hayhay/ClothDryer.blend"
-dest_files=["res://.godot/imported/ClothDryer.blend-8783f14032843fa6a354236228893827.scn"]
+source_file="res://Model/Gate/TestBake.blend"
+dest_files=["res://.godot/imported/TestBake.blend-10d42798830b54082345d6dfc3a422e2.scn"]
 
 [params]
 

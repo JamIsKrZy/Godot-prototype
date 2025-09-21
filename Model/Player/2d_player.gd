@@ -13,13 +13,25 @@ func _physics_process(delta: float) -> void:
 	# Apply gravity
 	if not is_on_floor():
 		velocity.y -= gravity * delta
-
+	
+	anim_sprite.speed_scale = 1.0
+	 
 	# Input: only left and right (X axis)
 	var input_dir := 0
 	if Input.is_action_pressed("ui_right"):
-		input_dir += 1
+		if Input.is_action_pressed("run"):
+			input_dir += 2
+			anim_sprite.speed_scale = 2.0  # double the fps (faster)
+		else:  
+			input_dir += 1
 	if Input.is_action_pressed("ui_left"):
-		input_dir -= 1
+		if Input.is_action_pressed("run"):
+			input_dir -= 2
+			anim_sprite.speed_scale = 2.0  # double the fps (faster)
+		else: 
+			input_dir -= 1
+		
+	
 
 	velocity.x = input_dir * speed
 	velocity.z = 0   # lock Z movement

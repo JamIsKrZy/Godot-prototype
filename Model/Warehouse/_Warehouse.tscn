@@ -1,6 +1,79 @@
-[gd_scene load_steps=2 format=3 uid="uid://bw3bc8gdtounj"]
+[gd_scene load_steps=8 format=4 uid="uid://bw3bc8gdtounj"]
 
 [ext_resource type="PackedScene" uid="uid://bs1r08ptbv4x1" path="res://Model/Warehouse/red_door_warehouse.glb" id="1_ptn0m"]
+[ext_resource type="Texture2D" uid="uid://c3ft57dnq2hqg" path="res://Model/Warehouse/red_door_warehouse_6.png" id="2_f76lf"]
+[ext_resource type="Texture2D" uid="uid://cgj3wwjgd56a3" path="res://Model/Warehouse/red_door_warehouse_7.png" id="3_10ji1"]
+[ext_resource type="Texture2D" uid="uid://drdoitfvn1t86" path="res://Model/Warehouse/red_door_warehouse_8.png" id="4_dqypn"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_aa5hi"]
+resource_name = "wall"
+cull_mode = 2
+albedo_texture = ExtResource("2_f76lf")
+metallic = 1.0
+metallic_texture = ExtResource("3_10ji1")
+metallic_texture_channel = 2
+roughness = 0.40685838
+roughness_texture = ExtResource("3_10ji1")
+roughness_texture_channel = 1
+normal_enabled = true
+normal_texture = ExtResource("4_dqypn")
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_vf7cs"]
+_surfaces = [{
+"aabb": AABB(-6.5018034, -8.416192, 0, 13.003607, 13.6897335, 1e-05),
+"format": 34359783425,
+"index_count": 12,
+"index_data": PackedByteArray("AAABAAIAAAACAAMAAQAAAAQAAQAEAAUA"),
+"name": "wall",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 6,
+"vertex_data": PackedByteArray("xg7QQLNc98AAAAAAxg7QwLNc98AAAAAAxg7QwNnAqEAAAAAAxg7QQNnAqEAAAAAAxg7QQLmoBsEAAAAAxg7QwLmoBsEAAAAA")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_md83w"]
+resource_name = "Sketchfab_Scene_Plane_005_wall_0"
+_surfaces = [{
+"aabb": AABB(-6.5018034, -8.416192, 0, 13.003607, 13.6897335, 1e-05),
+"attribute_data": PackedByteArray("M6cxP3lFhTkzpzE/eUWFOTOnMT95RYU5bUKFOXlFhTltQoU5eUWFOW1ChTl5RYU5bUKFOZOnMT9tQoU5k6cxP21ChTmTpzE/M6cxP5OnMT8zpzE/k6cxPzOnMT+TpzE/M6cxP3lFhTkzpzE/eUWFOTOnMT95RYU5bUKFOXlFhTltQoU5eUWFOW1ChTl5RYU5"),
+"format": 34359783543,
+"index_count": 12,
+"index_data": PackedByteArray("AAABAAIAAAACAAMAAQAAAAQAAQAEAAUA"),
+"material": SubResource("StandardMaterial3D_aa5hi"),
+"name": "wall",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 6,
+"vertex_data": PackedByteArray("xg7QQLNc98AAAAAAxg7QwLNc98AAAAAAxg7QwNnAqEAAAAAAxg7QQNnAqEAAAAAAxg7QQLmoBsEAAAAAxg7QwLmoBsEAAAAA/3//f////7//f/9/////v/9//3////+//3//f////7//f/9/////v/9//3////+/")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_vf7cs")
 
 [node name="Sketchfab_Scene" instance=ExtResource("1_ptn0m")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.0705035, 0)
+
+[node name="Plane_005_wall_5" type="MeshInstance3D" parent="Sketchfab_model/red_door_warehouse_fbx/RootNode/Plane_005" index="1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -12.891815, -2.1001324e-06)
+mesh = SubResource("ArrayMesh_md83w")
+skeleton = NodePath("")
+
+[node name="Plane_005_wall_8" type="MeshInstance3D" parent="Sketchfab_model/red_door_warehouse_fbx/RootNode/Plane_005" index="2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.815182, -12.891815, -2.1001324e-06)
+mesh = SubResource("ArrayMesh_md83w")
+skeleton = NodePath("")
+
+[node name="Plane_005_wall_9" type="MeshInstance3D" parent="Sketchfab_model/red_door_warehouse_fbx/RootNode/Plane_005" index="3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 25.36691, -12.891815, -2.1001324e-06)
+mesh = SubResource("ArrayMesh_md83w")
+skeleton = NodePath("")
+
+[node name="Plane_005_wall_2" type="MeshInstance3D" parent="Sketchfab_model/red_door_warehouse_fbx/RootNode/Plane_005" index="4"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.854958, 0, 0)
+mesh = SubResource("ArrayMesh_md83w")
+skeleton = NodePath("")
+
+[node name="Plane_005_wall_3" type="MeshInstance3D" parent="Sketchfab_model/red_door_warehouse_fbx/RootNode/Plane_005" index="5"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 25.778675, 0, 0)
+mesh = SubResource("ArrayMesh_md83w")
+skeleton = NodePath("")

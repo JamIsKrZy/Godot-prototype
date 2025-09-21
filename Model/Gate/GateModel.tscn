@@ -1,0 +1,12 @@
+[gd_scene load_steps=3 format=3 uid="uid://dumvxgxj5q4fh"]
+
+[ext_resource type="PackedScene" uid="uid://kpg165oekuo6" path="res://Model/Gate/TestBake.blend" id="1_g0v1b"]
+[ext_resource type="PackedScene" uid="uid://tp36r07ew4ql" path="res://Model/Gate/TestBake.glb" id="2_ce7h8"]
+
+[node name="Gate" type="Node3D"]
+
+[node name="TestBake" parent="." instance=ExtResource("1_g0v1b")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.27272558, 0, 0.7298016)
+
+[node name="TestBake2" parent="." instance=ExtResource("2_ce7h8")]
+transform = Transform3D(0.99988604, 0, 0.015096545, 0, 1, 0, -0.015096545, 0, 0.99988604, -3.4173226, -4.7683716e-07, 1.2111509)

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bhynf6ksupduk"
-path="res://.godot/imported/StandPole.png-2e55b481f3b424a2ded7b1d1bb87c510.ctex"
+uid="uid://m4vbvjwxy1cu"
+path="res://.godot/imported/gate_face_some.png-9e94fcda378a5efc3da9af1aa623aabe.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Model/Hayhay/textures/StandPole.png"
-dest_files=["res://.godot/imported/StandPole.png-2e55b481f3b424a2ded7b1d1bb87c510.ctex"]
+source_file="res://Model/Gate/Texture/gate_face_some.png"
+dest_files=["res://.godot/imported/gate_face_some.png-9e94fcda378a5efc3da9af1aa623aabe.ctex"]
 
 [params]
 

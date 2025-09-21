@@ -1,21 +1,70 @@
-[gd_scene load_steps=7 format=3 uid="uid://rkxb5rtmimaw"]
+[gd_scene load_steps=12 format=3 uid="uid://rkxb5rtmimaw"]
 
-[ext_resource type="Script" uid="uid://b426h8lubroq" path="res://camera_3d.gd" id="2_ehtv0"]
+[ext_resource type="Script" path="res://camera_3d.gd" id="2_ehtv0"]
 [ext_resource type="PackedScene" uid="uid://cn1o6msy6cand" path="res://Model/Player/2D_Player.tscn" id="3_fhgdp"]
 [ext_resource type="PackedScene" uid="uid://dqr6rph43hlbq" path="res://Model/Warehouse/Warehouse.tscn" id="3_fudbn"]
 [ext_resource type="PackedScene" uid="uid://bg78xrwbje5qq" path="res://Model/Stairs/Stairs.tscn" id="4_ehtv0"]
-[ext_resource type="PackedScene" uid="uid://y3ku6j54bvf1" path="res://Model/Hayhay/ClothDryer.blend" id="5_fhgdp"]
+[ext_resource type="PackedScene" uid="uid://bk30u2nqx62d8" path="res://Model/Frame/frame.tscn" id="6_x47tm"]
+
+[sub_resource type="Sky" id="Sky_fhgdp"]
 
 [sub_resource type="Environment" id="Environment_fudbn"]
+sky = SubResource("Sky_fhgdp")
+ambient_light_source = 3
+volumetric_fog_enabled = true
+volumetric_fog_albedo = Color(0.6367432, 0.7170236, 0.73716897, 1)
+volumetric_fog_length = 196.13
+volumetric_fog_detail_spread = 0.5946036
+volumetric_fog_ambient_inject = 7.1
+volumetric_fog_sky_affect = 0.57
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_fhgdp"]
+lifetime_randomness = 0.37
+emission_shape_offset = Vector3(-0.015, -0.265, 0)
+emission_shape_scale = Vector3(13.125, 0.85, 5.55)
+emission_shape = 3
+emission_box_extents = Vector3(1, 2.015, 1)
+direction = Vector3(10, -10, 0)
+spread = 10.0
+initial_velocity_min = 40.0
+initial_velocity_max = 40.0
+scale_min = 0.19999999
+scale_max = 0.59999996
+color = Color(0.98485833, 0.9815634, 0.9809086, 1)
+turbulence_noise_strength = 12.72
+turbulence_noise_scale = 10.0
+collision_mode = 1
+collision_friction = 1.0
+collision_bounce = 0.05
+
+[sub_resource type="Curve" id="Curve_x47tm"]
+_limits = [0.0, 0.1, 0.0, 1.0]
+_data = [Vector2(0, 0), 0.0, 0.0, 0, 0, Vector2(0.19512196, 0.05617977), 0.17718239, 0.17718239, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
+point_count = 3
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_v4wpw"]
+transparency = 1
+cull_mode = 2
+shading_mode = 0
+albedo_color = Color(0.5102559, 0.4975701, 0.47658646, 1)
+heightmap_scale = 16.0
+use_particle_trails = true
+proximity_fade_enabled = true
+proximity_fade_distance = 3.3
+stencil_flags = 2
+
+[sub_resource type="RibbonTrailMesh" id="RibbonTrailMesh_j2ecc"]
+material = SubResource("StandardMaterial3D_v4wpw")
+curve = SubResource("Curve_x47tm")
 
 [node name="Node3D" type="Node3D"]
 
 [node name="Camera3D" type="Camera3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 0.9747612, 0.22325012, 0, -0.22325012, 0.9747612, -13.1581335, 2.1351926, 6.5793176)
+transform = Transform3D(1, 0, 0, 0, 0.9747612, 0.22325012, 0, -0.22325012, 0.9747612, -13.1581335, 2.4666944, 5.049709)
 script = ExtResource("2_ehtv0")
 
 [node name="2dPlayer" parent="." instance=ExtResource("3_fhgdp")]
-transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -13.761, 0.15041482, 0)
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -13.761, 0.15041482, 0.79661417)
 
 [node name="Warehouse" parent="." instance=ExtResource("3_fudbn")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.252381, 0, -0.12534451)
@@ -35,5 +84,25 @@ directional_shadow_pancake_size = 2.9
 [node name="Stairs" parent="." instance=ExtResource("4_ehtv0")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.175283, 0, 0.01724577)
 
-[node name="ClothDryer" parent="." instance=ExtResource("5_fhgdp")]
-transform = Transform3D(0.53476536, 0, -0.8450006, 0, 1, 0, 0.8450006, 0, 0.53476536, -16.200966, 0, 0.25439453)
+[node name="Frame" parent="." instance=ExtResource("6_x47tm")]
+transform = Transform3D(2.09, 0, 0, 0, 2.09, 0, 0, 0, 2.09, -3.1691568, 2.7927322, -0.58303046)
+
+[node name="GPUParticles3D" type="GPUParticles3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14.599316, 12.047817, -3.0392144)
+amount = 100
+randomness = 0.55
+fixed_fps = 24
+collision_base_size = 0.0
+visibility_aabb = AABB(-9.445, -12.195, -4, 19.445, 13.075, 9.6)
+local_coords = true
+trail_enabled = true
+trail_lifetime = 0.2
+process_material = SubResource("ParticleProcessMaterial_fhgdp")
+draw_pass_1 = SubResource("RibbonTrailMesh_j2ecc")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -23.355234, 0.72530735, 0)
+
+[node name="GPUParticlesCollisionBox3D" type="GPUParticlesCollisionBox3D" parent="MeshInstance3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.31337547, -4.058038, -4.359062)
+size = Vector3(76.107925, 7.029258, 18.799881)
