@@ -5,6 +5,9 @@ var gravity: float = ProjectSettings.get_setting("physics/3d/default_gravity")
 
 @onready var anim_sprite: AnimatedSprite3D = $AnimatedSprite3D
 
+@onready var interact_panel: Panel = $CanvasLayer/UI/InteractPanel
+@onready var interact_label: Label = $CanvasLayer/UI/InteractPanel/InteractLabel
+
 # For action item detection
 var can_interact: bool = false
 var current_action_item: Node = null
@@ -43,3 +46,28 @@ func _physics_process(delta: float) -> void:
 	if can_interact and Input.is_action_just_pressed("ui_accept"):
 		if current_action_item:
 			current_action_item.trigger_action(self)
+# In your CharacterBody3D script
+func set_interactable(item: Node) -> void:
+	can_interact = item != null
+	current_action_item = item
+
+	if item:
+		var prompt := "Press [Enter] to interact"
+		# Safe: Object.get() returns null if the property doesn't exist.
+		var p = item.get("prompt_text")
+		if p != null and str(p) != "":
+			prompt = str(p)
+		show_prompt(prompt)
+	else:
+		hide_prompt()
+
+
+func show_prompt(text: String) -> void:
+	if interact_label and interact_panel:
+		interact_label.text = text
+		interact_panel.visible = true
+	else:
+		push_warning("Interact UI nodes not found. Check the node paths or names.")
+func hide_prompt() -> void:
+	interact_panel.visible = false
+

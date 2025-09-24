@@ -1,6 +1,6 @@
 [gd_scene load_steps=30 format=3 uid="uid://cn1o6msy6cand"]
 
-[ext_resource type="Script" uid="uid://c4hljmgexn63e" path="res://Model/Player/2d_player.gd" id="1_1j5a6"]
+[ext_resource type="Script" path="res://Model/Player/2d_player.gd" id="1_1j5a6"]
 [ext_resource type="Texture2D" uid="uid://clw803x2p6qm" path="res://Model/Player/sprite/1_Cat_Idle-Sheet.png" id="1_nvmo8"]
 [ext_resource type="Texture2D" uid="uid://bf2qqy7upyu8q" path="res://Model/Player/sprite/2_Cat_Run-Sheet.png" id="2_1j5a6"]
 [ext_resource type="Texture2D" uid="uid://dh6b1n2kpn0ip" path="res://Model/Player/sprite/4_Cat_Fall-Sheet.png" id="2_mj3c8"]
@@ -178,28 +178,28 @@ animations = [{
 }]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_vsjvh"]
-size = Vector3(0.17337799, 0.35144043, 0.06544141)
+size = Vector3(0.173378, 0.35144, 0.0654414)
 
 [sub_resource type="GDScript" id="GDScript_nvmo8"]
 script/source = "extends CollisionShape3D
-
-func _ready():
-	connect(\"body_entered\", Callable(self, \"_on_body_entered\"))
-	connect(\"body_exited\", Callable(self, \"_on_body_exited\"))
-
-func _on_body_entered(body):
-	if body.is_in_group(\"player\"): # Add your player to a \"player\" group
-		body.can_interact = true
-		body.current_action_item = self
-
-func _on_body_exited(body):
-	if body.is_in_group(\"player\"):
-		body.can_interact = false
-		body.current_action_item = null
-
-func trigger_action(player):
-	print(\"Action triggered by\", player.name)
-	# Do whatever (open door, pick item, etc.)
+#
+#func _ready():
+	#connect(\"body_entered\", Callable(self, \"_on_body_entered\"))
+	#connect(\"body_exited\", Callable(self, \"_on_body_exited\"))
+#
+#func _on_body_entered(body):
+	#if body.is_in_group(\"player\"): # Add your player to a \"player\" group
+		#body.can_interact = true
+		#body.current_action_item = self
+#
+#func _on_body_exited(body):
+	#if body.is_in_group(\"player\"):
+		#body.can_interact = false
+		#body.current_action_item = null
+#
+#func trigger_action(player):
+	#print(\"Action triggered by\", player.name)
+	## Do whatever (open door, pick item, etc.)
 "
 
 [node name="2dPlayer" type="CharacterBody3D"]
@@ -213,6 +213,24 @@ animation = &"fall"
 frame_progress = 0.707769
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0039634705, 0.16604151, 0.013799332)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00396347, 0.166042, 0.0137993)
 shape = SubResource("BoxShape3D_vsjvh")
 script = SubResource("GDScript_nvmo8")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="UI" type="Control" parent="CanvasLayer"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="InteractPanel" type="Panel" parent="CanvasLayer/UI"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="InteractLabel" type="Label" parent="CanvasLayer/UI/InteractPanel"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0

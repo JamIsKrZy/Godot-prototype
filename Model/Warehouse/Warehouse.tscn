@@ -3,15 +3,15 @@
 [ext_resource type="PackedScene" uid="uid://bw3bc8gdtounj" path="res://Model/Warehouse/_Warehouse.tscn" id="1_b522d"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_43jt0"]
-size = Vector3(13.087128, 0.04296875, 5.5595703)
+size = Vector3(13.0871, 0.0429688, 5.55957)
 
 [node name="Warehouse" type="Node3D"]
 
 [node name="StaticBody3D" type="StaticBody3D" parent="."]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.5896759, 0.03785312, -0.87939453)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.58968, 0.0378531, -0.879395)
 shape = SubResource("BoxShape3D_43jt0")
 
 [node name="Sketchfab_Scene" parent="." instance=ExtResource("1_b522d")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.1088039, 1.0705035, -3.90272)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.108804, 1.0705, -3.90272)

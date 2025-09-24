@@ -3,4 +3,4 @@
 [ext_resource type="PackedScene" uid="uid://bs1r08ptbv4x1" path="res://Model/Warehouse/red_door_warehouse.glb" id="1_ptn0m"]
 
 [node name="Sketchfab_Scene" instance=ExtResource("1_ptn0m")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.0705035, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.0705, 0)

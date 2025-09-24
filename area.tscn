@@ -1,0 +1,56 @@
+[gd_scene load_steps=10 format=3 uid="uid://cdwu4hjmgsbev"]
+
+[ext_resource type="PackedScene" uid="uid://dqr6rph43hlbq" path="res://Model/Warehouse/Warehouse.tscn" id="1_iqcfv"]
+[ext_resource type="PackedScene" uid="uid://cn1o6msy6cand" path="res://Model/Player/2D_Player.tscn" id="2_007dw"]
+[ext_resource type="PackedScene" uid="uid://bg78xrwbje5qq" path="res://Model/Stairs/Stairs.tscn" id="3_3eka6"]
+[ext_resource type="Script" path="res://Interactable.gd" id="4_m16n5"]
+[ext_resource type="Texture2D" uid="uid://clw803x2p6qm" path="res://Model/Player/sprite/1_Cat_Idle-Sheet.png" id="5_2mvqx"]
+[ext_resource type="Texture2D" uid="uid://djd4bo5u14jte" path="res://Model/ass/interact_e_icon.png" id="5_4i0np"]
+
+[sub_resource type="Environment" id="Environment_14gsu"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_u46g2"]
+size = Vector3(0.164337, 1, 2.14978)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_1erbf"]
+
+[node name="Area" type="Node3D"]
+
+[node name="Warehouse" parent="." instance=ExtResource("1_iqcfv")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.648844, 0, -0.439506)
+
+[node name="2dPlayer" parent="." instance=ExtResource("2_007dw")]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 0.162171, -0.0712228, -0.311986)
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0753531, 1.58695, 5.96397)
+
+[node name="Stairs" parent="." instance=ExtResource("3_3eka6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.68697, -2.38419e-07, 0.176308)
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_14gsu")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.98431, 1.23599, -1.13237)
+script = ExtResource("4_m16n5")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
+transform = Transform3D(0.999957, -0.00923266, 0, 0.00923266, 0.999957, 0, 0, 0, 1, -0.116287, 0, 0.57489)
+shape = SubResource("BoxShape3D_u46g2")
+disabled = true
+
+[node name="Sprite3D" type="Sprite3D" parent="StaticBody3D"]
+texture = ExtResource("5_2mvqx")
+
+[node name="Area3D" type="Area3D" parent="StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1.17987)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D/Area3D"]
+shape = SubResource("BoxShape3D_1erbf")
+
+[node name="Prompt3D" type="Sprite3D" parent="StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.03298, 0)
+pixel_size = 0.02
+texture_filter = 0
+texture = ExtResource("5_4i0np")
