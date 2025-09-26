@@ -3,7 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://cfpuojl5by7i8" path="res://Sprites/leaf.png" id="1_xnk1y"]
 
 [sub_resource type="Curve" id="Curve_x47tm"]
-_data = [Vector2(0, 0.15730345), 0.0, 0.0, 0, 0, Vector2(0.25, 0.23595512), 0.33707857, 0.33707857, 0, 0, Vector2(0.4848485, 0.1460675), 0.0, 0.0, 0, 0, Vector2(0.6969697, 0.24719107), 0.0, 0.0, 0, 0, Vector2(1, 0.08988774), 0.0, 0.0, 0, 0]
+_data = [Vector2(0, 0.157303), 0.0, 0.0, 0, 0, Vector2(0.25, 0.235955), 0.337079, 0.337079, 0, 0, Vector2(0.484848, 0.146068), 0.0, 0.0, 0, 0, Vector2(0.69697, 0.247191), 0.0, 0.0, 0, 0, Vector2(1, 0.0898877), 0.0, 0.0, 0, 0]
 point_count = 5
 
 [sub_resource type="CurveTexture" id="CurveTexture_v4wpw"]
@@ -17,11 +17,11 @@ emission_box_extents = Vector3(7.83, 1, 1.525)
 spread = 90.0
 initial_velocity_min = 1.0
 initial_velocity_max = 2.0
-angular_velocity_min = -1.6093254e-05
-angular_velocity_max = 19.999983
+angular_velocity_min = -1.60933e-05
+angular_velocity_max = 20.0
 gravity = Vector3(-5, -1.7, 0)
-tangential_accel_min = -2.2351742e-06
-tangential_accel_max = 27.219997
+tangential_accel_min = -2.23517e-06
+tangential_accel_max = 27.22
 tangential_accel_curve = SubResource("CurveTexture_v4wpw")
 scale_min = 0.0
 scale_max = 0.0

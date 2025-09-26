@@ -1,9 +1,10 @@
-[gd_scene load_steps=12 format=3 uid="uid://rkxb5rtmimaw"]
+[gd_scene load_steps=13 format=3 uid="uid://rkxb5rtmimaw"]
 
 [ext_resource type="Script" path="res://camera_3d.gd" id="2_ehtv0"]
 [ext_resource type="PackedScene" uid="uid://cn1o6msy6cand" path="res://Model/Player/2D_Player.tscn" id="3_fhgdp"]
 [ext_resource type="PackedScene" uid="uid://dqr6rph43hlbq" path="res://Model/Warehouse/Warehouse.tscn" id="3_fudbn"]
 [ext_resource type="PackedScene" uid="uid://bg78xrwbje5qq" path="res://Model/Stairs/Stairs.tscn" id="4_ehtv0"]
+[ext_resource type="AudioStream" uid="uid://b30xqmohjv0jk" path="res://sfx/gentle-rain-on-window-350529.mp3" id="6_v4wpw"]
 [ext_resource type="PackedScene" uid="uid://bk30u2nqx62d8" path="res://Model/Frame/frame.tscn" id="6_x47tm"]
 
 [sub_resource type="Sky" id="Sky_fhgdp"]
@@ -64,7 +65,8 @@ transform = Transform3D(1, 0, 0, 0, 0.9747612, 0.22325012, 0, -0.22325012, 0.974
 script = ExtResource("2_ehtv0")
 
 [node name="2dPlayer" parent="." instance=ExtResource("3_fhgdp")]
-transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -13.761, 0.15041482, 0.79661417)
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -13.761, 0.15041482, -0.06512356)
+collision_layer = 2
 
 [node name="Warehouse" parent="." instance=ExtResource("3_fudbn")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.252381, 0, -0.12534451)
@@ -106,3 +108,9 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -23.355234, 0.72530735, 0)
 [node name="GPUParticlesCollisionBox3D" type="GPUParticlesCollisionBox3D" parent="MeshInstance3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.31337547, -4.058038, -4.359062)
 size = Vector3(76.107925, 7.029258, 18.799881)
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.226721, 2.5437746, -2.6849236)
+stream = ExtResource("6_v4wpw")
+autoplay = true
+panning_strength = 0.97
