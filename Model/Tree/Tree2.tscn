@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://ni5wm4suobef"]
+
+[ext_resource type="ArrayMesh" uid="uid://jtbqeiryhq3o" path="res://Model/Tree/Meshes/Natural/Body1.res" id="1_r68p2"]
+[ext_resource type="ArrayMesh" uid="uid://bjtp3xiskutwm" path="res://Model/Tree/Meshes/Natural/Leaf1_0.res" id="2_60m56"]
+[ext_resource type="ArrayMesh" uid="uid://36i5m2ha3edo" path="res://Model/Tree/Meshes/Natural/Leaf1_2.res" id="3_se7al"]
+
+[node name="Tree" type="Node3D"]
+
+[node name="Body1" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.01, 0, 0, 0, -4.37114e-10, -0.01, 0, 0.01, -4.37114e-10, 0, 0, 0)
+mesh = ExtResource("1_r68p2")
+
+[node name="Leaf10" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.01, 0, 0, 0, -4.37114e-10, -0.01, 0, 0.01, -4.37114e-10, 0, 0, 0)
+mesh = ExtResource("2_60m56")
+
+[node name="Leaf12" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.01, 0, 0, 0, -4.37114e-10, -0.01, 0, 0.01, -4.37114e-10, 0, 0, 0)
+mesh = ExtResource("3_se7al")

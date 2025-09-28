@@ -6,19 +6,19 @@
 [ext_resource type="Script" uid="uid://bnsd2fyntembv" path="res://addons/dreadpon.spatial_gardener/greenhouse/greenhouse_plant.gd" id="3_gyugd"]
 [ext_resource type="Script" uid="uid://ckg16wf0ebcts" path="res://addons/dreadpon.spatial_gardener/greenhouse/greenhouse_plant_state.gd" id="4_jjce8"]
 
-[sub_resource type="Resource" id="Resource_lkt1g"]
+[sub_resource type="Resource" id="Resource_f1v30"]
 resource_name = "Greenhouse_LODVariant"
 script = ExtResource("1_f1v30")
 spawned_spatial = ExtResource("2_nb5uc")
 cast_shadow = 1
 metadata/class = "Greenhouse_LODVariant"
 
-[sub_resource type="Resource" id="Resource_vadxp"]
+[sub_resource type="Resource" id="Resource_nb5uc"]
 resource_name = "Greenhouse_Plant"
 script = ExtResource("3_gyugd")
-mesh/mesh_LOD_variants = [SubResource("Resource_lkt1g")]
-mesh/selected_for_edit_resource = SubResource("Resource_lkt1g")
-mesh/mesh_LOD_max_distance = 10.0
+mesh/mesh_LOD_variants = [SubResource("Resource_f1v30")]
+mesh/selected_for_edit_resource = SubResource("Resource_f1v30")
+mesh/mesh_LOD_max_distance = 142.87
 mesh/mesh_LOD_kill_distance = -1.0
 mesh/mesh_LOD_max_capacity = 75
 mesh/mesh_LOD_min_size = 1.0
@@ -49,17 +49,17 @@ import_export/import_greenhouse_data_button = false
 import_export/export_greenhouse_data_button = false
 metadata/class = "Greenhouse_Plant"
 
-[sub_resource type="Resource" id="Resource_jdlvg"]
+[sub_resource type="Resource" id="Resource_gyugd"]
 resource_name = "Greenhouse_PlantState"
 script = ExtResource("4_jjce8")
 plant/plant_brush_active = false
 plant/plant_label = ""
-plant/plant = SubResource("Resource_vadxp")
+plant/plant = SubResource("Resource_nb5uc")
 metadata/class = "Greenhouse_PlantState"
 
 [resource]
 resource_name = "Greenhouse"
 script = ExtResource("1_46llm")
-plant_types/greenhouse_plant_states = [SubResource("Resource_jdlvg")]
-plant_types/selected_for_edit_resource = SubResource("Resource_jdlvg")
+plant_types/greenhouse_plant_states = [SubResource("Resource_gyugd")]
+plant_types/selected_for_edit_resource = SubResource("Resource_gyugd")
 metadata/class = "Greenhouse"

@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://dje4spk4skuxi"]
+
+[ext_resource type="ArrayMesh" uid="uid://co8si0j7td0wx" path="res://Model/Tree/Meshes/Crooked/Body.res" id="1_p0lnt"]
+[ext_resource type="ArrayMesh" uid="uid://bog2ug1y5pa1g" path="res://Model/Tree/Meshes/Crooked/Leaf.res" id="2_3c6gl"]
+
+[node name="Tree" type="Node3D"]
+
+[node name="Body" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.01, 0, 0, 0, -4.37114e-10, -0.01, 0, 0.01, -4.37114e-10, 0, 0, 0)
+mesh = ExtResource("1_p0lnt")
+
+[node name="Leaf" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.01, 0, 0, 0, -4.37114e-10, -0.01, 0, 0.01, -4.37114e-10, 0, 0, 0)
+mesh = ExtResource("2_3c6gl")

@@ -1,6 +1,6 @@
 extends CharacterBody3D
 
-@export var speed: float = 5.0
+@export var speed: float = 3.0
 var gravity: float = ProjectSettings.get_setting("physics/3d/default_gravity")
 
 @onready var anim_sprite: AnimatedSprite3D = $AnimatedSprite3D
@@ -21,20 +21,20 @@ func _physics_process(delta: float) -> void:
 	if Input.is_action_pressed("ui_right"):
 		if Input.is_action_pressed("run"):
 			input_dir += 2
-			anim_sprite.speed_scale = 2.0  # double the fps (faster)
+			anim_sprite.speed_scale = 2.0
 		else:  
 			input_dir += 1
 	if Input.is_action_pressed("ui_left"):
 		if Input.is_action_pressed("run"):
 			input_dir -= 2
-			anim_sprite.speed_scale = 2.0  # double the fps (faster)
+			anim_sprite.speed_scale = 2.0
 		else: 
 			input_dir -= 1
-		
-	
 
-	velocity.x = input_dir * speed
-	velocity.z = 0   # lock Z movement
+	# Use the character's local X axis (right direction in world space)
+	var local_right = global_transform.basis.x
+
+	velocity = local_right * (input_dir * speed)
 
 	# Movement
 	move_and_slide()

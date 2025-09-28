@@ -1,9 +1,9 @@
 [gd_scene load_steps=13 format=3 uid="uid://rkxb5rtmimaw"]
 
 [ext_resource type="Script" path="res://camera_3d.gd" id="2_ehtv0"]
-[ext_resource type="PackedScene" uid="uid://cn1o6msy6cand" path="res://Model/Player/2D_Player.tscn" id="3_fhgdp"]
 [ext_resource type="PackedScene" uid="uid://dqr6rph43hlbq" path="res://Model/Warehouse/Warehouse.tscn" id="3_fudbn"]
 [ext_resource type="PackedScene" uid="uid://bg78xrwbje5qq" path="res://Model/Stairs/Stairs.tscn" id="4_ehtv0"]
+[ext_resource type="PackedScene" uid="uid://d16qlpdtf8exi" path="res://Model/Player/TestPlayer.tscn" id="6_j2ecc"]
 [ext_resource type="AudioStream" uid="uid://b30xqmohjv0jk" path="res://sfx/gentle-rain-on-window-350529.mp3" id="6_v4wpw"]
 [ext_resource type="PackedScene" uid="uid://bk30u2nqx62d8" path="res://Model/Frame/frame.tscn" id="6_x47tm"]
 
@@ -13,9 +13,9 @@
 sky = SubResource("Sky_fhgdp")
 ambient_light_source = 3
 volumetric_fog_enabled = true
-volumetric_fog_albedo = Color(0.6367432, 0.7170236, 0.73716897, 1)
+volumetric_fog_albedo = Color(0.636743, 0.717024, 0.737169, 1)
 volumetric_fog_length = 196.13
-volumetric_fog_detail_spread = 0.5946036
+volumetric_fog_detail_spread = 0.594604
 volumetric_fog_ambient_inject = 7.1
 volumetric_fog_sky_affect = 0.57
 
@@ -29,9 +29,9 @@ direction = Vector3(10, -10, 0)
 spread = 10.0
 initial_velocity_min = 40.0
 initial_velocity_max = 40.0
-scale_min = 0.19999999
-scale_max = 0.59999996
-color = Color(0.98485833, 0.9815634, 0.9809086, 1)
+scale_min = 0.2
+scale_max = 0.6
+color = Color(0.984858, 0.981563, 0.980909, 1)
 turbulence_noise_strength = 12.72
 turbulence_noise_scale = 10.0
 collision_mode = 1
@@ -40,19 +40,18 @@ collision_bounce = 0.05
 
 [sub_resource type="Curve" id="Curve_x47tm"]
 _limits = [0.0, 0.1, 0.0, 1.0]
-_data = [Vector2(0, 0), 0.0, 0.0, 0, 0, Vector2(0.19512196, 0.05617977), 0.17718239, 0.17718239, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
+_data = [Vector2(0, 0), 0.0, 0.0, 0, 0, Vector2(0.195122, 0.0561798), 0.177182, 0.177182, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
 point_count = 3
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_v4wpw"]
 transparency = 1
 cull_mode = 2
 shading_mode = 0
-albedo_color = Color(0.5102559, 0.4975701, 0.47658646, 1)
+albedo_color = Color(0.510256, 0.49757, 0.476586, 1)
 heightmap_scale = 16.0
 use_particle_trails = true
 proximity_fade_enabled = true
 proximity_fade_distance = 3.3
-stencil_flags = 2
 
 [sub_resource type="RibbonTrailMesh" id="RibbonTrailMesh_j2ecc"]
 material = SubResource("StandardMaterial3D_v4wpw")
@@ -61,21 +60,17 @@ curve = SubResource("Curve_x47tm")
 [node name="Node3D" type="Node3D"]
 
 [node name="Camera3D" type="Camera3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 0.9747612, 0.22325012, 0, -0.22325012, 0.9747612, -13.1581335, 2.4666944, 5.049709)
+transform = Transform3D(1, 0, 0, 0, 0.974761, 0.22325, 0, -0.22325, 0.974761, -13.1581, 2.46669, 5.04971)
 script = ExtResource("2_ehtv0")
 
-[node name="2dPlayer" parent="." instance=ExtResource("3_fhgdp")]
-transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -13.761, 0.15041482, -0.06512356)
-collision_layer = 2
-
 [node name="Warehouse" parent="." instance=ExtResource("3_fudbn")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.252381, 0, -0.12534451)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.2524, 0, -0.125345)
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_fudbn")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.641596, 5.3306713, 4.339568)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.6416, 5.33067, 4.33957)
 directional_shadow_split_1 = 0.203
 directional_shadow_split_2 = 0.21
 directional_shadow_split_3 = 0.603
@@ -84,13 +79,13 @@ directional_shadow_max_distance = 12.2
 directional_shadow_pancake_size = 2.9
 
 [node name="Stairs" parent="." instance=ExtResource("4_ehtv0")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.175283, 0, 0.01724577)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.17528, 0, 0.0172458)
 
 [node name="Frame" parent="." instance=ExtResource("6_x47tm")]
-transform = Transform3D(2.09, 0, 0, 0, 2.09, 0, 0, 0, 2.09, -3.1691568, 2.7927322, -0.58303046)
+transform = Transform3D(2.09, 0, 0, 0, 2.09, 0, 0, 0, 2.09, -3.16916, 2.79273, -0.58303)
 
 [node name="GPUParticles3D" type="GPUParticles3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14.599316, 12.047817, -3.0392144)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14.5993, 12.0478, -3.03921)
 amount = 100
 randomness = 0.55
 fixed_fps = 24
@@ -103,14 +98,17 @@ process_material = SubResource("ParticleProcessMaterial_fhgdp")
 draw_pass_1 = SubResource("RibbonTrailMesh_j2ecc")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -23.355234, 0.72530735, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -23.3552, 0.725307, 0)
 
 [node name="GPUParticlesCollisionBox3D" type="GPUParticlesCollisionBox3D" parent="MeshInstance3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.31337547, -4.058038, -4.359062)
-size = Vector3(76.107925, 7.029258, 18.799881)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.313375, -4.05804, -4.35906)
+size = Vector3(76.1079, 7.02926, 18.7999)
 
 [node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.226721, 2.5437746, -2.6849236)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.2267, 2.54377, -2.68492)
 stream = ExtResource("6_v4wpw")
 autoplay = true
 panning_strength = 0.97
+
+[node name="2dPlayer" parent="." instance=ExtResource("6_j2ecc")]
+transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, -13.9253, -0.14716, -0.283167)
