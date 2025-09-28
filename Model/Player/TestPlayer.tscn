@@ -133,6 +133,7 @@ shaded = true
 texture_filter = 0
 sprite_frames = SubResource("SpriteFrames_x0vt2")
 animation = &"run"
+frame_progress = 0.989258
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0297861, 0.590473, 0.0137993)
