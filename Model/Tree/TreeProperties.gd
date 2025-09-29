@@ -8,8 +8,6 @@ extends Node3D
 @export_range(0.0, 1.0, 0.01) var fresnel_strength: float = 0.3 : set = _set_fresnel_strength
 @export_range(0.1, 5.0, 0.01) var fresnel_power: float = 1.5 : set = _set_fresnel_power
 
-# Path to the mesh that has the ShaderMaterial (defaults to Mesh2)
-@export var target_mesh_path: NodePath = "Mesh2"
 
 # ---- Setters ----
 func _set_foliage_colour(v: Color) -> void:
@@ -39,14 +37,17 @@ func _process(_delta: float) -> void:
 
 # ---- Internal updater ----
 func _update_shader() -> void:
-	
-	var mesh_instance := get_node_or_null(target_mesh_path) as MeshInstance3D
-	if not mesh_instance:
-		return
-	var mat := mesh_instance.get_active_material(0) as ShaderMaterial
-	if mat:
-		mat.set_shader_parameter("foliage_colour", foliage_colour)
-		mat.set_shader_parameter("color_strength", color_strength)
-		mat.set_shader_parameter("fresnel_colour", fresnel_colour)
-		mat.set_shader_parameter("fresnel_strength", fresnel_strength)
-		mat.set_shader_parameter("fresnel_power", fresnel_power)
+	print($".".get_child_count(false))
+	var children_nodes := $".".get_children(false)
+	print(children_nodes)
+	for child in children_nodes:
+		print(child.name)
+		if( child.get_instance_id() == $Leaf41.get_instance_id()):
+			var mesh_instance := child as MeshInstance3D
+			var mat := mesh_instance.get_active_material(0) as ShaderMaterial
+			if mat:
+				mat.set_shader_parameter("foliage_colour", foliage_colour)
+				mat.set_shader_parameter("color_strength", color_strength)
+				mat.set_shader_parameter("fresnel_colour", fresnel_colour)
+				mat.set_shader_parameter("fresnel_strength", fresnel_strength)
+				mat.set_shader_parameter("fresnel_power", fresnel_power)

@@ -18,6 +18,10 @@ config/features=PackedStringArray("4.4", "GL Compatibility")
 
 enabled=PackedStringArray("res://addons/proton_scatter/plugin.cfg", "res://addons/script-ide/plugin.cfg", "res://addons/terrain_3d/plugin.cfg")
 
+[filesystem]
+
+import/blender/enabled=false
+
 [input]
 
 ui_left={

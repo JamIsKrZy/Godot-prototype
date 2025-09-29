@@ -1,0 +1,22 @@
+[gd_scene load_steps=5 format=3 uid="uid://oviik3krxhm"]
+
+[ext_resource type="Script" uid="uid://behtpcmu7k8ku" path="res://Model/Tree/TreeProperties.gd" id="1_6407b"]
+[ext_resource type="ArrayMesh" uid="uid://cw362atw0d36c" path="res://Model/Tree/Meshes/Tall/Body4.res" id="1_yxjki"]
+[ext_resource type="ArrayMesh" uid="uid://bs0dousxu856i" path="res://Model/Tree/Meshes/Tall/Leaf4_1.res" id="2_6407b"]
+[ext_resource type="ArrayMesh" uid="uid://bhjrudrpjogt2" path="res://Model/Tree/Meshes/Tall/Leaf4_2.res" id="3_27t0d"]
+
+[node name="Tree7" type="Node3D"]
+script = ExtResource("1_6407b")
+foliage_colour = Color(0.444733, 0.261491, 0.498659, 1)
+
+[node name="Body4" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.03, 0, 0, 0, -1.31134e-09, -0.03, 0, 0.03, -1.31134e-09, 0, 0, 0)
+mesh = ExtResource("1_yxjki")
+
+[node name="Leaf41" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.03, 0, 0, 0, -1.31134e-09, -0.03, 0, 0.03, -1.31134e-09, 0, 0, 0)
+mesh = ExtResource("2_6407b")
+
+[node name="Leaf42" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.03, 0, 0, 0, -1.31134e-09, -0.03, 0, 0.03, -1.31134e-09, 0, 0, 0)
+mesh = ExtResource("3_27t0d")

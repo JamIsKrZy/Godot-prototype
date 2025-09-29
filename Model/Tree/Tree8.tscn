@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://d3nl5mvih5xsl"]
+
+[ext_resource type="ArrayMesh" uid="uid://duv4vryytiuel" path="res://Model/Tree/Meshes/Tall/Body3.res" id="1_gx0jj"]
+[ext_resource type="ArrayMesh" uid="uid://8bje6v6tdu6p" path="res://Model/Tree/Meshes/Tall/Leaf3_1.res" id="2_34ppp"]
+[ext_resource type="ArrayMesh" uid="uid://42ju0yxocq1w" path="res://Model/Tree/Meshes/Tall/Leaf3_2.res" id="3_agrdu"]
+
+[node name="Tree7" type="Node3D"]
+
+[node name="Body3" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.03, 0, 0, 0, -1.31134e-09, -0.03, 0, 0.03, -1.31134e-09, 0, 0, 0)
+mesh = ExtResource("1_gx0jj")
+
+[node name="Leaf31" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.03, 0, 0, 0, -1.31134e-09, -0.03, 0, 0.03, -1.31134e-09, 0, 0, 0)
+mesh = ExtResource("2_34ppp")
+
+[node name="Leaf32" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.03, 0, 0, 0, -1.31134e-09, -0.03, 0, 0.03, -1.31134e-09, 0, 0, 0)
+mesh = ExtResource("3_agrdu")
