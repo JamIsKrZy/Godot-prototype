@@ -1,0 +1,9 @@
+[gd_scene load_steps=3 format=3 uid="uid://dcn0b2m7ja5v"]
+
+[ext_resource type="PackedScene" uid="uid://dymn8gtd07e31" path="res://Model/BetterTrees/models/bushy.glb" id="1_8fqq4"]
+[ext_resource type="Material" uid="uid://bsfk6lgigxc50" path="res://Model/BetterTrees/textures/foliage.material" id="2_ynib3"]
+
+[node name="bushy" instance=ExtResource("1_8fqq4")]
+
+[node name="Roundcube" parent="." index="0"]
+surface_material_override/0 = ExtResource("2_ynib3")

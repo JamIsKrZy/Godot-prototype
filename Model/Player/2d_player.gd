@@ -16,6 +16,7 @@ func _physics_process(delta: float) -> void:
 	
 	anim_sprite.speed_scale = 1.0
 	 
+	
 	# Input: only left and right (X axis)
 	var input_dir := 0
 	if Input.is_action_pressed("ui_right"):
