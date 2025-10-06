@@ -1,30 +1,29 @@
-[gd_scene load_steps=7 format=3 uid="uid://rkxb5rtmimaw"]
+[gd_scene load_steps=6 format=3 uid="uid://rkxb5rtmimaw"]
 
 [ext_resource type="Script" uid="uid://b426h8lubroq" path="res://camera_3d.gd" id="2_ehtv0"]
 [ext_resource type="PackedScene" uid="uid://cn1o6msy6cand" path="res://Model/Player/2D_Player.tscn" id="3_fhgdp"]
 [ext_resource type="PackedScene" uid="uid://dqr6rph43hlbq" path="res://Model/Warehouse/Warehouse.tscn" id="3_fudbn"]
 [ext_resource type="PackedScene" uid="uid://bg78xrwbje5qq" path="res://Model/Stairs/Stairs.tscn" id="4_ehtv0"]
-[ext_resource type="PackedScene" uid="uid://y3ku6j54bvf1" path="res://Model/Hayhay/ClothDryer.blend" id="5_fhgdp"]
 
 [sub_resource type="Environment" id="Environment_fudbn"]
 
 [node name="Node3D" type="Node3D"]
 
 [node name="Camera3D" type="Camera3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 0.9747612, 0.22325012, 0, -0.22325012, 0.9747612, -13.1581335, 2.1351926, 6.5793176)
+transform = Transform3D(1, 0, 0, 0, 0.974761, 0.22325, 0, -0.22325, 0.974761, -13.1581, 2.13519, 6.57932)
 script = ExtResource("2_ehtv0")
 
 [node name="2dPlayer" parent="." instance=ExtResource("3_fhgdp")]
-transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -13.761, 0.15041482, 0)
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -13.761, 0.150415, 0)
 
 [node name="Warehouse" parent="." instance=ExtResource("3_fudbn")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.252381, 0, -0.12534451)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.2524, 0, -0.125345)
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_fudbn")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.641596, 5.3306713, 4.339568)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.6416, 5.33067, 4.33957)
 directional_shadow_split_1 = 0.203
 directional_shadow_split_2 = 0.21
 directional_shadow_split_3 = 0.603
@@ -33,7 +32,4 @@ directional_shadow_max_distance = 12.2
 directional_shadow_pancake_size = 2.9
 
 [node name="Stairs" parent="." instance=ExtResource("4_ehtv0")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.175283, 0, 0.01724577)
-
-[node name="ClothDryer" parent="." instance=ExtResource("5_fhgdp")]
-transform = Transform3D(0.53476536, 0, -0.8450006, 0, 1, 0, 0.8450006, 0, 0.53476536, -16.200966, 0, 0.25439453)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.17528, 0, 0.0172458)

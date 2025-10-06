@@ -33,13 +33,19 @@ func _physics_process(delta: float) -> void:
 	elif input_dir > 0:
 		anim_sprite.flip_h = false
 
-	# Animation switching
+	# Animation switchinge
 	if input_dir == 0:
 		anim_sprite.play("idle")
 	else:
 		anim_sprite.play("run")
-
-	# Handle interaction
-	if can_interact and Input.is_action_just_pressed("ui_accept"):
+	
+func set_interactable(item: Node) -> void:
+	current_action_item = item
+	can_interact = item != null
+	print("current_action_item set to: ", current_action_item.name if current_action_item else "None")
+	
+func _process(delta: float) -> void:
+	if can_interact and Input.is_action_just_pressed("Enter e"):
 		if current_action_item:
+			print("Triggering action now!")
 			current_action_item.trigger_action(self)

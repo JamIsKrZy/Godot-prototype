@@ -1,6 +1,6 @@
-[gd_scene load_steps=7 format=3 uid="uid://dhk6j6eb6e3q"]
+[gd_scene load_steps=7 format=3 uid="uid://ce6jf8j2wci3q"]
 
-[ext_resource type="Script" uid="uid://cu72eg68owyfe" path="res://addons/dialogic/Modules/DefaultLayoutParts/Layer_VN_Choices/vn_choice_layer.gd" id="1_kurgw"]
+[ext_resource type="Script" uid="uid://caej1v38l5h0r" path="res://CenteredChoices/vn_choice_layer.gd" id="1_kurgw"]
 [ext_resource type="Script" uid="uid://qkenhj7ku8ke" path="res://addons/dialogic/Modules/Choice/node_choice_button.gd" id="1_w632k"]
 [ext_resource type="Script" uid="uid://oknjwly53civ" path="res://addons/dialogic/Modules/Choice/node_button_sound.gd" id="2_mgko6"]
 [ext_resource type="AudioStream" uid="uid://b6c1p14bc20p1" path="res://addons/dialogic/Example Assets/sound-effects/typing1.wav" id="3_mql8i"]
@@ -13,14 +13,15 @@ layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = 5.0
-offset_top = 6.0
-offset_right = 5.0
-offset_bottom = 6.0
+offset_left = 104.0
+offset_top = 7.0
+offset_right = -46.0
+offset_bottom = 7.0
 grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
 script = ExtResource("1_kurgw")
+boxes_stylebox_hovered = "uid://xs2s6euq5stw"
 
 [node name="Choices" type="VBoxContainer" parent="."]
 layout_mode = 1
@@ -29,10 +30,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -42.0
-offset_top = -190.0
-offset_right = 44.0
-offset_bottom = 191.0
+offset_left = -41.0
+offset_top = -47.0
+offset_right = 42.0
+offset_bottom = 47.0
 grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2

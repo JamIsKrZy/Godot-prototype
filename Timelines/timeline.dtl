@@ -1,0 +1,10 @@
+"Test Charack": Hello this is a test case1dd
+"Test Charack": Test Case 1
+"Test Charack": Test Case 2
+Test Case 3
+Last Line
+- Yes
+	You press okay
+	[signal arg="end_convo"]
+- No
+	You press no
